@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entre em contato</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <!-- cabeçalho com os links solicitados -->
+    <div class="header">
+            
+        <div id="titulo">
+            <h1>Contato | Grasiella Aparecida Baader</h1>
+        </div>
+
+        <div id="menu">
+            <a href="index.html">Sobre mim</a>
+            <a href="formacao.html">Formação</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html">Contato</a>
+        </div>
+    </div>
+
+    <!--  formulário para entrar em contato -->
+    <div class="content">
+        <div id="contato">
+            <h2>Entre em contato:</h2>
+            <form id="form-mensagem">
+                <!-- Dados a serem preenchidos -->
+                <label for="nome" placeholder="Digite o seu nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <br><br>
+                <label for="email" placeholder="Digite o seu e-mail">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+                <label for="mensagem" placeholder="Digite uma mensagem:">Mensagem:</label>
+                <textarea name="mensagem" id="mensagem" rows="10" required></textarea>
+                <br><br>
+                <!-- Botão de enviar -->
+                <input type="submit" value="Enviar">
+
+                <!-- área que sera exibida a confirmação que a mensagem foi enviada -->
+                 <div id="mensagemEnviada"></div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Simulando o envio do formulário com JavaScript -->
+    <script>
+        document.getElementById('form-mensagem').addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            const mensagemEnviada = document.getElementById('mensagemEnviada');
+    
+            // Simular envio
+            mensagemEnviada.textContent = "Mensagem enviada com sucesso!"
+            mensagemEnviada.style.color = 'green';
+
+            // Limpa formulário
+            document.getElementById('form-mensagem').reset();
+        });
+    </script>
+    <!-- rodapé -->
+    <div class="footer">
+        &copy; 2025 - Grasiella Aparecida Baader
+    </div>
+</body>
+</html>
